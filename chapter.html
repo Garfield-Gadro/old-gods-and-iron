@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>阅读 · 旧神与钢铁</title>
+<meta name="description" content="《旧神与钢铁》正文在线阅读。">
+<meta name="theme-color" content="#0a0c0f">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<div class="topbar">
+  <div class="inner">
+    <a class="back" href="index.html">← 目录</a>
+    <span class="here" id="here"></span>
+    <div class="size" role="group" aria-label="字号">
+      <button type="button" data-size="17" aria-pressed="false">A</button>
+      <button type="button" data-size="19" aria-pressed="true">A</button>
+      <button type="button" data-size="22" aria-pressed="false">A</button>
+    </div>
+  </div>
+</div>
+
+<main class="reader wrap">
+  <header class="head" id="chapter-head"></header>
+  <article class="body" id="chapter-body"></article>
+
+  <nav class="pager" id="pager" aria-label="章节导航"></nav>
+  <p class="colophon" id="colophon"></p>
+
+  <div class="notice" id="fallback" hidden>
+    没有找到这一章。<a href="index.html">回目录</a>
+  </div>
+</main>
+
+<script src="data/chapters.js"></script>
+<script src="assets/app.js"></script>
+<script>
+  // 数据缺失时给出明确出口，而不是空白页
+  if (!window.__NOVEL__) {
+    document.getElementById('fallback').hidden = false;
+    document.getElementById('chapter-head').innerHTML = '';
+  }
+</script>
+</body>
+</html>
