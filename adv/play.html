@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>旧神与钢铁 · 序章</title>
+<meta name="theme-color" content="#0a0c0f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23b3934f' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%235cb9c4' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="is-play">
+
+<div class="progress" id="progress"></div>
+
+<header class="topbar">
+  <div class="inner">
+    <a class="back" href="index.html">← 幕目</a>
+    <div class="here" id="bar-here"></div>
+  </div>
+</header>
+
+<main class="stage" id="stage"></main>
+
+<nav class="bottombar" aria-label="场景交互">
+  <button class="bar-btn" id="bar-invest" type="button" disabled>调查<span class="bar-n" id="bar-invest-n"></span></button>
+  <button class="bar-btn" id="bar-ask" type="button" disabled>追问</button>
+  <span class="bar-spacer"></span>
+  <a class="bar-btn ghost" href="index.html">幕目</a>
+</nav>
+
+<div class="overlay" id="overlay" hidden></div>
+
+<script src="data/scenarios.js"></script>
+<script src="assets/adv.js"></script>
+</body>
+</html>
